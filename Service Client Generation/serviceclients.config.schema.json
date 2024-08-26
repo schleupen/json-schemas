@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "JSON Schema für ServiceClients-SourceGenerator Config Format",
+
+  "type": "object",
+
+  "properties": {
+    "CustomCodeNamespace": {
+      "type": "string",
+      "description": "Legt einen benutzerdefinierten Namespace für den generierten Code fest. (Schleupen.CS.CustomNamespace.V3_0)",
+      "pattern": "[\\w.]+(\\.V\\d+_\\d+)?"
+    },
+    "Debug": {
+      "type": "boolean",
+      "description": "Aktiviert das Debugging des SourceGenerators."
+    },
+    "Features": {
+      "type": "string",
+      "description": "Gibt an, wie der Code generiert werden soll.",
+      "enum": [ "None", "Async", "AsyncServer" ]
+    },
+    "GenerationMode": {
+      "type": "string",
+      "description": "Gibt an, welcher Modus für die Generierung verwendet werden soll.",
+      "enum": [ "ClientWrapper", "OnlySigento" ]
+    },
+    "HasInternalModifier": {
+      "type": "boolean",
+      "description": "Generiert die Typen und Klassen als 'internal'."
+    },
+    "IsDotNet": {
+      "type": "boolean",
+      "description": "Ermöglicht das überschreiben der automatisch gefundenen DotNet Version. Wenn 'true' wird der Client mit einem WcfHttpClient generiert."
+    },
+    "Overrides": {
+      "type": "array",
+      "description": "Ermöglicht das überschreiben der Einstellungen für angegebene Services. Wenn nicht alle Werte angegeben wurden, werden die der Globalen Einstellung hinzugezogen.",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "properties": {
+          "ArtifactIdentifier": {
+            "type": "string",
+            "description": "Gibt den ArtifactIdentifier der zu überschreibenen Datei an. (Schleupen.AS.MT.BIB.Buecher.EntityService_3.2)"
+          },
+          "CustomCodeNamespace": {
+            "type": "string",
+            "description": "Legt einen benutzerdefinierten Namespace für den generierten Code fest. (Schleupen.CS.CustomNamespace.V3_0)",
+            "pattern": "[\\w.]+(\\.V\\d+_\\d+)?"
+          },
+          "Debug": {
+            "type": "boolean",
+            "description": "Aktiviert das Debugging des SourceGenerators."
+          },
+          "Features": {
+            "type": "string",
+            "description": "Gibt an, wie der Code generiert werden soll.",
+            "enum": [ "None", "Async", "AsyncServer" ]
+          },
+          "GenerationMode": {
+            "type": "string",
+            "description": "Gibt an, welcher Modus für die Generierung verwendet werden soll.",
+            "enum": [ "ClientWrapper", "OnlySigento" ]
+          },
+          "HasInternalModifier": {
+            "type": "boolean",
+            "description": "Generiert die Typen und Klassen als 'internal'."
+          }
+        }
+      }
+    }
+  }
+}
