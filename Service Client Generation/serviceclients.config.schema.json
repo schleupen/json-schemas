@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema",
-  "title": "JSON Schema für ServiceClients-SourceGenerator Config Format",
+  "title": "JSON-Schema für die Konfiguration des ServiceClients-SourceGenerators",
 
   "type": "object",
 
@@ -30,7 +30,7 @@
     },
     "IsDotNet": {
       "type": "boolean",
-      "description": "Ermöglicht das überschreiben der automatisch gefundenen DotNet Version. Wenn 'true' wird der Client mit einem WcfHttpClient generiert."
+      "description": "Ermöglicht das überschreiben der automatisch gefundenen DotNet Version. Wenn 'true', wird der Client mit einem WcfHttpClient generiert."
     },
     "Overrides": {
       "type": "array",
