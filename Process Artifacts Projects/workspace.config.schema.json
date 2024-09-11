@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "JSON-Schema für die Konfiguration der Prozessartefakt-Projekte",
+  "type": "object",
+  "properties": {
+    "processartifacts": {
+      "type": "array",
+      "description": "Gibt an, welche Prozessartefakte in diesem Projekt verwaltet werden. Dies wird vom Source Repository dazu genutzt, um das korrekte Workspace-Mapping zu finden.",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "Workflows",
+          "UserInterfaces",
+          "CustomDataType"
+        ]
+      }
+    }
+  }
+}
