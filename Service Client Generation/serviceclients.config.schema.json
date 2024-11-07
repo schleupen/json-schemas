@@ -32,6 +32,10 @@
       "type": "boolean",
       "description": "Ermöglicht das überschreiben der automatisch gefundenen DotNet Version. Wenn 'true', wird der Client mit einem WcfHttpClient generiert."
     },
+    "DoNotGenerateSessionTokenProvider": {
+      "type": "boolean",
+      "description": "Deaktiviert die Dependency-Injection des SessionTokenProviders. Das SessionToken muss im Request manuell gesetzt werden!"
+    },
     "Overrides": {
       "type": "array",
       "description": "Ermöglicht das überschreiben der Einstellungen für angegebene Services. Wenn nicht alle Werte angegeben wurden, werden die der Globalen Einstellung hinzugezogen.",
