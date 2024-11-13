@@ -22,7 +22,7 @@
     "GenerationMode": {
       "type": "string",
       "description": "Gibt an, welcher Modus für die Generierung verwendet werden soll.",
-      "enum": [ "ClientWrapper", "OnlySigento" ]
+      "enum": [ "ClientWrapper", "OnlyWcf", "WithoutWcf" ]
     },
     "HasInternalModifier": {
       "type": "boolean",
@@ -30,7 +30,7 @@
     },
     "IsDotNet": {
       "type": "boolean",
-      "description": "Ermöglicht das überschreiben der automatisch gefundenen DotNet Version. Wenn 'true', wird der Client mit einem WcfHttpClient generiert."
+      "description": "Ermöglicht das Überschreiben der automatisch gefundenen DotNet Version. Wenn 'true', wird der Client mit einem WcfHttpClient generiert."
     },
     "DoNotGenerateSessionTokenProvider": {
       "type": "boolean",
@@ -38,14 +38,14 @@
     },
     "Overrides": {
       "type": "array",
-      "description": "Ermöglicht das überschreiben der Einstellungen für angegebene Services. Wenn nicht alle Werte angegeben wurden, werden die der Globalen Einstellung hinzugezogen.",
+      "description": "Ermöglicht das Überschreiben der Einstellungen für angegebene Services. Wenn nicht alle Werte angegeben wurden, werden die der globalen Einstellung hinzugezogen.",
       "minItems": 0,
       "items": {
         "type": "object",
         "properties": {
           "ArtifactIdentifier": {
             "type": "string",
-            "description": "Gibt den ArtifactIdentifier der zu überschreibenen Datei an. (Schleupen.AS.MT.BIB.Buecher.EntityService_3.2)"
+            "description": "Gibt den ArtifactIdentifier der zu überschreibenden Datei an. (Schleupen.AS.MT.BIB.Buecher.EntityService_3.2)"
           },
           "CustomCodeNamespace": {
             "type": "string",
@@ -64,7 +64,7 @@
           "GenerationMode": {
             "type": "string",
             "description": "Gibt an, welcher Modus für die Generierung verwendet werden soll.",
-            "enum": [ "ClientWrapper", "OnlySigento" ]
+            "enum": [ "ClientWrapper", "OnlyWcf", "WithoutWcf" ]
           },
           "HasInternalModifier": {
             "type": "boolean",
