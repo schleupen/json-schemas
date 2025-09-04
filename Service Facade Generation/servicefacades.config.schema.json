@@ -1,0 +1,63 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "JSON-Schema für die Konfiguration des ServiceFacades-SourceGenerators",
+
+    "type": "object",
+
+    "properties": {
+        "CustomCodeNamespace": {
+            "type": "string",
+            "description": "Legt einen benutzerdefinierten Namespace für den generierten Code fest. (Schleupen.CS.CustomNamespace.V3_0)",
+            "pattern": "[\\w.]+(\\.V\\d+_\\d+)?"
+        },
+        "Debug": {
+            "type": "boolean",
+            "description": "Aktiviert das Debugging des SourceGenerators."
+        },
+        "Features": {
+            "type": "string",
+            "description": "Gibt an, wie der Code generiert werden soll.",
+            "enum": [ "None", "Async" ]
+        },
+        "HasInternalModifier": {
+            "type": "boolean",
+            "description": "Generiert die Typen und Klassen als 'internal'."
+        },
+        "DoNotGenerateSessionTokenProvider": {
+            "type": "boolean",
+            "description": "Deaktiviert die Dependency-Injection des SessionTokenProviders. Das SessionToken muss im Request manuell gesetzt werden!"
+        },
+        "Overrides": {
+            "type": "array",
+            "description": "Ermöglicht das Überschreiben der Einstellungen für angegebene Services. Wenn nicht alle Werte angegeben wurden, werden die der globalen Einstellung hinzugezogen.",
+            "minItems": 0,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "ArtifactIdentifier": {
+                        "type": "string",
+                        "description": "Gibt den ArtifactIdentifier der zu überschreibenden Datei an. (Schleupen.AS.MT.BIB.Buecher.EntityService_3.2)"
+                    },
+                    "CustomCodeNamespace": {
+                        "type": "string",
+                        "description": "Legt einen benutzerdefinierten Namespace für den generierten Code fest. (Schleupen.CS.CustomNamespace.V3_0)",
+                        "pattern": "[\\w.]+(\\.V\\d+_\\d+)?"
+                    },
+                    "Debug": {
+                        "type": "boolean",
+                        "description": "Aktiviert das Debugging des SourceGenerators."
+                    },
+                    "Features": {
+                        "type": "string",
+                        "description": "Gibt an, wie der Code generiert werden soll.",
+                        "enum": [ "None", "Async" ]
+                    },
+                    "HasInternalModifier": {
+                        "type": "boolean",
+                        "description": "Generiert die Typen und Klassen als 'internal'."
+                    }
+                }
+            }
+        }
+    }
+}

@@ -28,10 +28,6 @@
       "type": "boolean",
       "description": "Generiert die Typen und Klassen als 'internal'."
     },
-    "IsDotNet": {
-      "type": "boolean",
-      "description": "Ermöglicht das Überschreiben der automatisch gefundenen DotNet Version. Wenn 'true', wird der Client mit einem WcfHttpClient generiert."
-    },
     "DoNotGenerateSessionTokenProvider": {
       "type": "boolean",
       "description": "Deaktiviert die Dependency-Injection des SessionTokenProviders. Das SessionToken muss im Request manuell gesetzt werden!"
@@ -64,7 +60,7 @@
           "GenerationMode": {
             "type": "string",
             "description": "Gibt an, welcher Modus für die Generierung verwendet werden soll.",
-            "enum": [ "ClientWrapper", "OnlyWcf", "WithoutWcf" ]
+            "enum": [ "Full", "SoapWcfOnly", "RestWebApiOnly" ]
           },
           "HasInternalModifier": {
             "type": "boolean",
