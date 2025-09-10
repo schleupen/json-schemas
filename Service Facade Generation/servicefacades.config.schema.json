@@ -23,6 +23,10 @@
             "type": "boolean",
             "description": "Generiert die Typen und Klassen als 'internal'."
         },
+        "UseCancellationToken": {
+			"type": "boolean",
+			"description": "Aktiviert die Übergabe eines CancellationToken bei asynchronen Operationen."
+		},
         "DoNotGenerateSessionTokenProvider": {
             "type": "boolean",
             "description": "Deaktiviert die Dependency-Injection des SessionTokenProviders. Das SessionToken muss im Request manuell gesetzt werden!"
@@ -55,9 +59,14 @@
                     "HasInternalModifier": {
                         "type": "boolean",
                         "description": "Generiert die Typen und Klassen als 'internal'."
-                    }
+                    },
+                    "UseCancellationToken": {
+			            "type": "boolean",
+			            "description": "Aktiviert die Übergabe eines CancellationToken bei asynchronen Operationen."
+		            },
                 }
             }
         }
     }
+
 }
