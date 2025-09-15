@@ -27,10 +27,6 @@
 			"type": "boolean",
 			"description": "Aktiviert die Übergabe eines CancellationToken bei asynchronen Operationen."
 		},
-        "DoNotGenerateSessionTokenProvider": {
-            "type": "boolean",
-            "description": "Deaktiviert die Dependency-Injection des SessionTokenProviders. Das SessionToken muss im Request manuell gesetzt werden!"
-        },
         "Overrides": {
             "type": "array",
             "description": "Ermöglicht das Überschreiben der Einstellungen für angegebene Services. Wenn nicht alle Werte angegeben wurden, werden die der globalen Einstellung hinzugezogen.",
@@ -69,3 +65,4 @@
         }
     }
 }
+
