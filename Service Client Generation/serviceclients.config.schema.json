@@ -22,7 +22,7 @@
     "GenerationMode": {
       "type": "string",
       "description": "Gibt an, welcher Modus für die Generierung verwendet werden soll.",
-      "enum": [ "Full", "SoapWcfOnly", "RestWebApiOnly" ]
+      "enum": [ "Full", "SoapWcfOnly", "WebApiOnly" ]
     },
     "HasInternalModifier": {
       "type": "boolean",
@@ -60,7 +60,7 @@
           "GenerationMode": {
             "type": "string",
             "description": "Gibt an, welcher Modus für die Generierung verwendet werden soll.",
-            "enum": [ "Full", "SoapWcfOnly", "RestWebApiOnly" ]
+            "enum": [ "Full", "SoapWcfOnly", "WebApiOnly" ]
           },
           "HasInternalModifier": {
             "type": "boolean",
