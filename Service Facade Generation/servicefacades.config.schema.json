@@ -19,10 +19,6 @@
             "description": "Gibt an, wie der Code generiert werden soll.",
             "enum": [ "None", "Async" ]
         },
-        "HasInternalModifier": {
-            "type": "boolean",
-            "description": "Generiert die Typen und Klassen als 'internal'."
-        },
         "UseCancellationToken": {
 			"type": "boolean",
 			"description": "Aktiviert die Übergabe eines CancellationToken bei asynchronen Operationen."
@@ -52,10 +48,6 @@
                         "description": "Gibt an, wie der Code generiert werden soll.",
                         "enum": [ "None", "Async" ]
                     },
-                    "HasInternalModifier": {
-                        "type": "boolean",
-                        "description": "Generiert die Typen und Klassen als 'internal'."
-                    },
                     "UseCancellationToken": {
 			            "type": "boolean",
 			            "description": "Aktiviert die Übergabe eines CancellationToken bei asynchronen Operationen."
@@ -65,4 +57,5 @@
         }
     }
 }
+
 
