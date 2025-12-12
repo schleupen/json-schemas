@@ -5,15 +5,6 @@
     "type": "object",
 
     "properties": {
-        "CustomCodeNamespace": {
-            "type": "string",
-            "description": "Legt einen benutzerdefinierten Namespace für den generierten Code fest. (Schleupen.CS.CustomNamespace.V3_0)",
-            "pattern": "[\\w.]+(\\.V\\d+_\\d+)?"
-        },
-        "Debug": {
-            "type": "boolean",
-            "description": "Aktiviert das Debugging des SourceGenerators."
-        },
         "Features": {
             "type": "string",
             "description": "Gibt an, wie der Code generiert werden soll.",
@@ -23,6 +14,10 @@
 			"type": "boolean",
 			"description": "Aktiviert die Übergabe eines CancellationToken bei asynchronen Operationen."
 		},
+		"Debug": {
+            "type": "boolean",
+            "description": "Aktiviert das Debugging des SourceGenerators."
+        },
         "Overrides": {
             "type": "array",
             "description": "Ermöglicht das Überschreiben der Einstellungen für angegebene Services. Wenn nicht alle Werte angegeben wurden, werden die der globalen Einstellung hinzugezogen.",
@@ -39,10 +34,6 @@
                         "description": "Legt einen benutzerdefinierten Namespace für den generierten Code fest. (Schleupen.CS.CustomNamespace.V3_0)",
                         "pattern": "[\\w.]+(\\.V\\d+_\\d+)?"
                     },
-                    "Debug": {
-                        "type": "boolean",
-                        "description": "Aktiviert das Debugging des SourceGenerators."
-                    },
                     "Features": {
                         "type": "string",
                         "description": "Gibt an, wie der Code generiert werden soll.",
@@ -52,10 +43,12 @@
 			            "type": "boolean",
 			            "description": "Aktiviert die Übergabe eines CancellationToken bei asynchronen Operationen."
 		            },
+					"Debug": {
+                        "type": "boolean",
+                        "description": "Aktiviert das Debugging des SourceGenerators."
+                    },
                 }
             }
         }
     }
 }
-
-
