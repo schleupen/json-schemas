@@ -29,6 +29,10 @@
                         "type": "string",
                         "description": "Gibt den ArtifactIdentifier der zu überschreibenden Datei an. (Schleupen.AS.MT.BIB.Buecher.EntityService_3.2)"
                     },
+					"RelativePath": {
+            			"type": "string",
+           				"description": "Relativer Pfad zur WSDL- oder YAML-Datei, bezogen auf das Basisverzeichnis. Dient zur eindeutigen Zuordnung von Overrides mit identischem ArtifactIdentifier. Muss als Windows-Pfad mit doppelten Backslashes angegeben werden. (Buecher\\Schleupen.AS.MT.BIB.Buecher.EntityService_3.2.wsdl)"
+					},
                     "CustomCodeNamespace": {
                         "type": "string",
                         "description": "Legt einen benutzerdefinierten Namespace für den generierten Code fest. (Schleupen.CS.CustomNamespace.V3_0)",
@@ -52,3 +56,4 @@
         }
     }
 }
+
