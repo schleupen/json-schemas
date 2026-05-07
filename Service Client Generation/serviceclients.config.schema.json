@@ -61,6 +61,10 @@
             "type": "boolean",
             "description": "Generiert die Typen und Klassen als 'internal'."
           },
+          "HasMultipleImplementations": {
+            "type": "boolean",
+            "description": "Fügt der ClientFactory eine zusätzliche Create‑Methode hinzu, die den ServiceImplementationResolver nutzt, um alle registrierten Implementierungen eines Services zu identifizieren und als IEnumerable von Implementierungsbeschreibung‑/Client‑Tupeln zurückzugeben."
+          },
           "IsLocalhostOnlyService": {
             "type": "boolean",
             "description": "Generiert den Client so, dass der Service immer auf dem lokalen Host aufgerufen wird."
