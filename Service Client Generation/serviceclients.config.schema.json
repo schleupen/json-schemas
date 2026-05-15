@@ -73,6 +73,10 @@
             "type": "boolean",
             "description": "Aktiviert das Debugging des SourceGenerators."
           },
+          "DoNotGenerateSessionTokenProvider": {
+            "type": "boolean",
+            "description": "Deaktiviert die Dependency-Injection des SessionTokenProviders. Das SessionToken muss im Request manuell gesetzt werden!"
+          },
         }
       }
     }
